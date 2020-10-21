@@ -1,0 +1,23 @@
+<h1 class="mb-3">All our Flats <%= "(#{@flats.length})" %></h1>
+
+<div class="card-grid">
+  <% @flats.each do |flat| %>
+<!--    TODO: ask about random photo -->
+    <div class="flat-card">
+      <div class="flat-card-image" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')"></div>
+      <div class="flat-top">
+        <h4> <strong><%= flat.name %> </strong></h4>
+        <p><%= flat.address %></p>
+        <div class="card-details">
+          <p> <i class="fas fa-user-friends"></i> <%= flat.price_per_night %></p>
+          <p> <i class="fas fa-euro-sign"></i> <%= flat.number_of_guests %></p>
+        </div>
+      </div>
+      <div class="flat-actions">
+        <%= link_to "More details", flat_path(flat), class: 'text-primary' %>
+        <%= link_to "Edit", "#", class: 'text-warning' %>
+        <%= link_to "Remove", "#", class: 'text-danger' %>
+      </div>
+    </div>
+  <% end %>
+</div>
