@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-6 m-auto">
+    <div class="flat-form">
+      <h1>Add a new flat</h1>
+      <div class="form">
+<!--        TODO: find how to add margin between inputs-->
+        <%= simple_form_for @flat do |f| %>
+          <%= f.input :name, input_html: { class: 'form-control' } %>
+          <%= f.input :address, input_html: { class: 'form-control' } %>
+          <%= f.input :description, input_html: { class: 'form-control' } %>
+          <%= f.input :number_of_guests, input_html: { class: 'form-control' } %>
+          <%= f.input :price_per_night, input_html: { class: 'form-control' } %>
+          <%= f.submit "Create a flat", class: 'btn btn-primary mt-3' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
